@@ -5,6 +5,11 @@
       "ProjectGuid": "8d0b8c3c-5477-4dd2-91d5-e62a621a2eb1",
       "DisplayName": "advinarNumero",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1
