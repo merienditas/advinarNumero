@@ -3,42 +3,46 @@ public class Program
 {
     public static void Main(String[] args)
     {
-        const int respuesta = 0;
-        int numeroParaAdivinar = 0; 
+        const int valorMinimo =0;
+        const int valorMaximo = 0;
+        const int intentosMaximos = 3;
 
-    
-        while (respuesta <16)
+        var generadorAleatorio = new Random();
+        int numeroParaAdivinar = generadorAleatorio.Next(valorMinimo, valorMaximo);
+        int numeroUsuario = 0; 
+        int intentos =0;
+        
+        Console.Title = "ADIVINACIÓN Y OTRAS COSAS"; 
+
+        Console.WriteLine ("¡HOLA! Bienvenidx a nuestro programa.");
+        Console.WriteLine("Debe adivinar en qué numero estoy pensando del 0 al 16. *TIENE 3 INTENTOS*. "); 
+        Console.WriteLine("-------------------------------------------------------------------------------------------------");
+
+        while ((numeroUsuario != numeroParaAdivinar) && ( intentos == intentosMaximos ))
         {
-            MenuDeEntrada();
             MenuIntentos();
 
-                if (numeroParaAdivinar <= 16 )
-                {
 
-                    var generadorAleatorio = new Random();
-                    numeroParaAdivinar = generadorAleatorio.Next(0, 16);
-
-                Console.WriteLine($"El número a adivinar era {numeroParaAdivinar}");
-                }
-      
-            break;
-        }
+            if (numeroUsuario == numeroParaAdivinar)
+            {
+                Console.WriteLine("¡¡ENHORABUENA!! HAS GANADOOOOOOOOOOOO");
+            }
+            else
+            {
+                Console.WriteLine("Lo siento, otra vez será. :( ");
+            }
+            Console.ReadLine();    
+            }
+        
     }
 
-    public static void MenuDeEntrada ()
-    {
-        Console.WriteLine("Adivinación y otras cosas.  ");
-        Console.WriteLine("--------------------------");
-        Console.WriteLine ("Adivine en qué numero estoy pensando del 0 al 16. Tiene 3 intentos. ");
-        Console.WriteLine("--------------------------------------------------------------------");
-    }
      private static void MenuIntentos()
     {
         Console.WriteLine("Introduzca un número. Éste es su primer intento. ");
-        int respuesta = Int32.Parse(Console.ReadLine());
+        int NumeroUsuario = Int32.Parse(Console.ReadLine());
         Console.WriteLine("Éste es su segundo intento. ");
-        respuesta = Int32.Parse(Console.ReadLine());
+        NumeroUsuario = Int32.Parse(Console.ReadLine());
         Console.WriteLine("Éste es su tercer y último intento");
-        respuesta = Int32.Parse(Console.ReadLine());    
+        NumeroUsuario = Int32.Parse(Console.ReadLine());    
     } 
 }
