@@ -36,7 +36,7 @@ public class Program
         
     }
 
-    /* private static void MenuIntentos()
+    private static void MenuIntentos()
     {
         Console.WriteLine("Introduzca un número. Éste es su primer intento. ");
         int NumeroUsuario = Int32.Parse(Console.ReadLine());
